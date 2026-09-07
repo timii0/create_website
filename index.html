@@ -195,6 +195,28 @@
             margin-bottom: 1rem;
         }
 
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-group {
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .skill-group h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+            color: #1976D2;
+        }
+
+        .skill-group p {
+            color: #555;
+        }
+
         @media (max-width: 768px) {
             .profile-section {
                 grid-template-columns: 1fr;
@@ -211,6 +233,10 @@
 
             .social-link {
                 justify-content: center;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -265,7 +291,7 @@
                 </div>
 
                 <div class="content-block">
-                    <p>As an Operations Analytics Co-op at Delta Air Lines, I built a full-stack visualization tool for more than 300 KPIs and engineered an algorithm that cascades goals across hierarchies of over 20,000 nodes. I also work as an Undergraduate Research Assistant at Texas Tech, applying Python, MATLAB, and machine learning to atmospheric field, wind-tunnel, and simulation data.</p>
+                    <p>In Summer 2026, as an Operations Analytics Co-op at Delta Air Lines, I built a full-stack visualization tool for more than 300 KPIs and engineered an algorithm that cascades goals across hierarchies of over 20,000 nodes. This experience drives my desire to explore role which combine multiple fields within Computer Science. I also work as an Undergraduate Research Assistant at Texas Tech, applying Python, MATLAB, and machine learning to atmospheric field, wind-tunnel, and simulation data.</p>
                 </div>
 
                 <div class="content-block">
@@ -278,12 +304,24 @@
 
                 <section>
                     <h2>Skills</h2>
-                    <ul>
-                        <li>Data Analysis</li>
-                        <li>Data Engineering</li>
-                        <li>Software Engineering</li>
-                        <li>AI Engineering</li>
-                    </ul>
+                    <div class="skills-grid">
+                        <div class="skill-group">
+                            <h3>Languages</h3>
+                            <p>JavaScript, Python, C/C++, Java, SQL (PostgreSQL), HTML/CSS, MATLAB</p>
+                        </div>
+                        <div class="skill-group">
+                            <h3>Frameworks</h3>
+                            <p>React, Next.js, Node.js, Three.js, Flask, PyTorch, Tailwind CSS, FastAPI</p>
+                        </div>
+                        <div class="skill-group">
+                            <h3>Developer Tools</h3>
+                            <p>Vercel, Git, AWS, Django, Vite, Azure Lab Services, Google Cloud Platform, IntelliJ IDEA</p>
+                        </div>
+                        <div class="skill-group">
+                            <h3>Libraries</h3>
+                            <p>Pandas, NumPy, Matplotlib, scikit-learn, TensorFlow, XGBoost, SciPy</p>
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>
