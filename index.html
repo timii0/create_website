@@ -217,6 +217,66 @@
             color: #555;
         }
 
+        .gallery-section {
+            margin-top: 4rem;
+            padding-top: 1rem;
+        }
+
+        .gallery-section > h2 {
+            margin-bottom: 0.35rem;
+            font-size: 2rem;
+        }
+
+        .gallery-intro {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+
+        .gallery-grid {
+            columns: 3 260px;
+            column-gap: 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            margin: 0 0 1rem;
+            overflow: hidden;
+            break-inside: avoid;
+            background: #f1f3f5;
+            border-radius: 24px 6px 24px 6px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+        }
+
+        .gallery-item:nth-child(3n + 2) {
+            border-radius: 6px 30px 6px 30px;
+        }
+
+        .gallery-item:nth-child(4n) {
+            border-radius: 50px 8px 20px 8px;
+        }
+
+        .gallery-item img {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: transform 0.35s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.025);
+        }
+
+        .gallery-item figcaption {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 2.5rem 1rem 0.8rem;
+            color: #fff;
+            font-size: 0.9rem;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.72));
+        }
+
         @media (max-width: 768px) {
             .profile-section {
                 grid-template-columns: 1fr;
@@ -238,6 +298,14 @@
             .skills-grid {
                 grid-template-columns: 1fr;
             }
+
+            .gallery-section {
+                margin-top: 2.5rem;
+            }
+
+            .gallery-grid {
+                columns: 2 150px;
+            }
         }
     </style>
 </head>
@@ -247,6 +315,7 @@
             <a href="index.html" class="name-title">Oluwatimilehin Sapara</a>
             <div class="nav-links">
                 <a href="projects.html">Projects</a>
+                <a href="#gallery">Gallery</a>
                 <a href="files/Resume.pdf" target="_blank">CV</a>
             </div>
         </nav>
@@ -254,8 +323,7 @@
         <div class="profile-section">
             <div class="profile-sidebar">
                 <img src="images/profile.jpg" alt="Profile Picture" class="profile-image">
-                <h1>Oluwatimilehin Sapara</h1>
-                <p class="interests">Third Year Computer Science Scholar</p>
+                <h2 class="interests">Third Year Computer Science Scholar</h2>
                 <div class="social-links">
                     <a href="#" class="social-link location">
                         <i class="fas fa-map-marker-alt"></i>
@@ -325,6 +393,41 @@
                 </section>
             </div>
         </div>
+
+        <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
+            <h2 id="gallery-title">Gallery</h2>
+            <p class="gallery-intro">A few moments from my research, professional, and community experiences.</p>
+            <div class="gallery-grid">
+                <figure class="gallery-item">
+                    <img src="images/gallery/gallery1.jpg" alt="Oluwatimilehin standing in front of the Keep Climbing Together sign and a Delta aircraft" loading="lazy" decoding="async">
+                    <figcaption>Keep climbing</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/gallery/gallery6.jpg" alt="Oluwatimilehin standing beside his machine-learning-aided tornado pressure prediction research poster" loading="lazy" decoding="async">
+                    <figcaption>Machine learning meets wind engineering</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/gallery/gallery8.jpg" alt="Oluwatimilehin in a suit at the 2026 National Society of Black Engineers Annual Convention" loading="lazy" decoding="async">
+                    <figcaption>NSBE Annual Convention</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/gallery/gallery4.jpg" alt="Oluwatimilehin presenting his machine-learning tornado research poster at the 2026 Texas Tech Undergraduate Research Conference" loading="lazy" decoding="async">
+                    <figcaption>Presenting tornado research</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/gallery/gallery7.png" alt="Oluwatimilehin and a research colleague standing in front of their tornado pressure prediction poster" loading="lazy" decoding="async">
+                    <figcaption>Research collaboration</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/gallery/gallery5.jpg" alt="Oluwatimilehin pointing toward his machine-learning research poster during a conference presentation" loading="lazy" decoding="async">
+                    <figcaption>Undergraduate Research Conference</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/gallery/gallery2.jpg" alt="Oluwatimilehin standing beside the large Delta Keep Climbing display" loading="lazy" decoding="async">
+                    <figcaption>A summer at Delta</figcaption>
+                </figure>
+            </div>
+        </section>
     </div>
 </body>
 </html>
