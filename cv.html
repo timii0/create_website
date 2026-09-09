@@ -39,7 +39,27 @@
         }
 
         .name-title {
-            font-size: 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: clamp(1rem, 2.2vw, 1.5rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            white-space: nowrap;
+            transition: color 0.2s ease;
+        }
+
+        .name-title::before {
+            content: "<";
+        }
+
+        .name-title::after {
+            content: ">";
+        }
+
+        .name-title:hover {
+            color: #90caf9;
         }
 
         .nav-links {
@@ -96,7 +116,7 @@
 <body>
     <div class="container">
         <nav>
-            <a href="#" class="name-title">Maaz Amjad</a>
+            <a href="index.html" class="name-title">Oluwatimilehin Sapara</a>
             <div class="nav-links">
                 <a href="#projects">Projects</a>
                 <a href="#cv">CV</a>
