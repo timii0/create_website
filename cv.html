@@ -5,13 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Profile</title>
     <style>
-        /* [Previous styles remain the same] */
-        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #080808;
+            color: #f5f5f5;
+            color-scheme: dark;
+        }
+
+        .container {
+            width: min(100% - 2rem, 1200px);
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .name-title,
+        .nav-links a {
+            color: #f5f5f5;
+            text-decoration: none;
+        }
+
+        .name-title {
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #bdbdbd;
+        }
+
+        .nav-links a:hover {
+            color: #64b5f6;
+        }
+
         .cv-section {
             text-align: center;
             padding: 3rem;
             margin: 2rem 0;
-            background: #f5f5f5;
+            background: #151515;
+            border: 1px solid #2b2b2b;
             border-radius: 8px;
         }
 
@@ -20,8 +69,8 @@
             align-items: center;
             gap: 0.5rem;
             padding: 1rem 2rem;
-            background-color: #2196F3;
-            color: white;
+            background-color: #1976d2;
+            color: #fff;
             text-decoration: none;
             border-radius: 4px;
             transition: background-color 0.3s;
@@ -29,7 +78,7 @@
         }
 
         .cv-download-button:hover {
-            background-color: #1976D2;
+            background-color: #1565c0;
         }
 
         .cv-icon {
@@ -39,7 +88,7 @@
 
         .cv-description {
             margin-top: 1rem;
-            color: #666;
+            color: #bdbdbd;
         }
     </style>
 </head>
