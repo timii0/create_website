@@ -20,6 +20,15 @@
             color-scheme: dark;
         }
 
+        h1,
+        h2,
+        h3,
+        .content-block p,
+        .gallery-intro,
+        .gallery-item figcaption {
+            font-family: Georgia, 'Times New Roman', serif;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -64,15 +73,23 @@
         .profile-sidebar {
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            align-self: start;
+            gap: 0.75rem;
+            padding: 1.25rem;
+            background: #111;
+            border: 1px solid #292929;
+            border-radius: 18px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
         }
 
         .profile-image {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
+            width: 100%;
+            aspect-ratio: 1;
+            border: 1px solid #303030;
+            border-radius: 14px;
             object-fit: cover;
-            margin-bottom: 0.5rem;
+            object-position: center 25%;
+            margin-bottom: 0.25rem;
         }
 
         .profile-info h1 {
@@ -82,13 +99,19 @@
 
         .interests {
             color: #bdbdbd;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.45;
         }
 
         .social-links {
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            width: 100%;
+            gap: 0.2rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid #292929;
         }
 
         .social-link {
@@ -97,83 +120,64 @@
             display: flex;
             align-items: center;
             gap: 0.8rem;
-            padding: 0.7rem;
-            transition: all 0.3s ease;
-            border-radius: 8px;
-            font-size: 0.95rem;
+            min-height: 42px;
+            padding: 0.55rem 0.65rem;
+            border-radius: 7px;
+            font-size: 0.9rem;
+            transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
         }
 
         .social-link i {
             width: 20px;
             text-align: center;
-            font-size: 1.2rem;
+            color: #90caf9;
+            font-size: 1.05rem;
         }
 
         .ttu-logo {
-            width: 16px; /* Smaller logo size */
-            height: 16px;
-            margin-right: 0.5rem;
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+            filter: grayscale(1) brightness(1.8);
         }
 
-        /* Colorful icons */
-        .social-link.linkedin i {
-            color: #0077b5;
-        }
-
-        .social-link.github i {
-            color: #f5f5f5;
-        }
-
-        .social-link.twitter i {
-            color: #1DA1F2;
-        }
-
-        .social-link.email i {
-            color: #EA4335;
-        }
-
-        .social-link.university i {
-            color: #cc0000;
-        }
-
-        .social-link.location i {
-            color: #34a853;
-        }
-
-        /* Hover effects */
         .social-link:hover {
-            transform: translateX(5px);
-            background-color: #171717;
+            color: #fff;
+            background-color: #1c1c1c;
+            transform: translateX(3px);
         }
 
-        .social-link.linkedin:hover {
-            background-color: #0c2430;
-        }
-
-        .social-link.github:hover {
-            background-color: #171717;
-        }
-
-        .social-link.twitter:hover {
-            background-color: #0b2433;
-        }
-
-        .social-link.email:hover {
-            background-color: #2a1313;
-        }
-
-        .social-link.university:hover {
-            background-color: #2a1010;
-        }
-
-        .social-link.location:hover {
-            background-color: #102419;
+        .social-link:focus-visible {
+            outline: 2px solid #64b5f6;
+            outline-offset: 2px;
         }
 
         .main-content h2 {
             font-size: 2rem;
             color: #f5f5f5;
             margin-bottom: 1.5rem;
+        }
+
+        .main-content .welcome-title {
+            margin: 0;
+            color: #f5f5f5;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: clamp(4.5rem, 9vw, 8rem);
+            font-weight: 700;
+            line-height: 0.9;
+            letter-spacing: -0.06em;
+        }
+
+        .welcome-block {
+            max-width: 680px;
+            margin: 1.75rem 0 2.25rem;
+        }
+
+        .welcome-block p {
+            color: #d0d0d0;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            line-height: 1.55;
         }
 
         .content-block {
@@ -220,7 +224,8 @@
         }
 
         .gallery-section {
-            margin-top: 4rem;
+            width: 70%;
+            margin: 4rem auto 0;
             padding-top: 1rem;
             scroll-margin-top: 1rem;
         }
@@ -238,7 +243,7 @@
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(12, minmax(0, 1fr));
-            grid-auto-rows: 52px;
+            grid-auto-rows: 32px;
             grid-auto-flow: dense;
             gap: 1rem;
         }
@@ -322,12 +327,17 @@
             }
 
             .gallery-section {
+                width: 100%;
                 margin-top: 2.5rem;
+            }
+
+            .main-content .welcome-title {
+                font-size: clamp(4rem, 20vw, 6rem);
             }
 
             .gallery-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
-                grid-auto-rows: 130px;
+                grid-auto-rows: 90px;
             }
 
             .gallery-item--hero,
@@ -379,10 +389,6 @@
                 <img src="images/profile.jpg" alt="Profile Picture" class="profile-image">
                 <h2 class="interests">Third Year Computer Science Scholar</h2>
                 <div class="social-links">
-                    <a href="#" class="social-link location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Lubbock, Texas, United States
-                    </a>
                     <a href="https://www.ttu.edu" class="social-link university" target="_blank">
                         <img src="images/logo.png" alt="TTU Logo" class="ttu-logo">
                         Texas Tech University
@@ -399,17 +405,13 @@
                         <i class="fab fa-linkedin"></i>
                         LinkedIn
                     </a>
-                    <a href="https://x.com/MaazAmjad13" class="social-link twitter" target="_blank">
-                        <i class="fab fa-x-twitter"></i>
-                        X (formerly Twitter)
-                    </a>
                 </div>
             </div>
 
             <div class="main-content">
-                <h2>About me</h2>
-                <div class="content-block">
-                    <p>I'm Oluwatimilehin Sapara, a Computer Science student at <a href="https://www.ttu.edu" class="highlight-link" target="_blank">Texas Tech University</a>, pursuing minors in Mathematics and Actuarial Science. I maintain a 4.0 GPA and expect to graduate in December 2027.</p>
+                <h2 class="welcome-title">Welcome,</h2>
+                <div class="welcome-block">
+                    <p>Hello, I am Oluwatimilehin, a Computer Science student at Texas Tech University with a passion for machine learning, data analytics, and software development.</p>
                 </div>
 
                 <div class="content-block">
